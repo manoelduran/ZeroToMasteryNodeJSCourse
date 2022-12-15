@@ -1,0 +1,7 @@
+{
+  "name": "zeroToMastery",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./js/ES8/asyncAwait/index.js",
+  "license": "MIT"
+}
