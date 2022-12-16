@@ -2,6 +2,6 @@
   "name": "zeroToMastery",
   "version": "1.0.0",
   "type": "module",
-  "main": "./js/ThreadsConcurrencyParallelism/index.js",
+  "main": "./nodejs/modules/myModule/index.js",
   "license": "MIT"
 }
