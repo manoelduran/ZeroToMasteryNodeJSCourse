@@ -1,0 +1,13 @@
+{
+  "name": "planets",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.3"
+  }
+}
