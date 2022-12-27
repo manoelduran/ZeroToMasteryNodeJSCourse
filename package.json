@@ -2,7 +2,7 @@
   "name": "zeroToMastery",
   "version": "1.0.0",
   "type": "module",
-  "main": "./nodejs/modules/thirdPartyModules/api.js",
+  "main": "./js/CallStack&&MemoryHeap/stackoverflow/index.js",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.2.1",
@@ -10,6 +10,6 @@
   },
   "scripts": {
     "start": "node ./nodejs/modules/thirdPartyModules/api.js",
-    "dev": "nodemon ./nodejs/modules/thirdPartyModules/api.js"
+    "dev": "nodemon ./js/CallStack&&MemoryHeap/stackoverflow/index.js"
   }
 }
