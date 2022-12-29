@@ -32,3 +32,5 @@ function a() {
 }
 
 a()
+
+console.log('4')
