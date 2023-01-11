@@ -1,8 +1,8 @@
-import friends from '../models/friends';
+import {friends} from '../models/friends.js';
 
 export function createFriend(req, res) {
-
-    const { name } = req.body;
+    const {name} = req.body
+    
     if (!name) {
         return res.status(400).json({ error: 'You need to write a name from your new friend!' });
     }
