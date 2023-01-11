@@ -1,5 +1,5 @@
 import express from 'express';
-import {createFriend, getFriends, getFriendById} from '../controllers/FriendsController';
+import {createFriend, getFriends, getFriendById} from '../controllers/FriendsController.js';
 
 export const friendsROuter = express.Router();
 
@@ -8,8 +8,8 @@ friendsROuter.use((req,res,next) => {
     next()
 })
 
-friendsROuter.post('/', createFriend())
+friendsROuter.post('/', createFriend)
 
-friendsROuter.get('/', getFriends())
+friendsROuter.get('/', getFriends)
 
-friendsROuter.get('/:id', getFriendById())
+friendsROuter.get('/:id', getFriendById)
