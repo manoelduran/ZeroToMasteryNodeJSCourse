@@ -1,5 +1,5 @@
 import express from 'express';
-import { planetsRouter } from './routes/planets/planets.routes';
+import { planetsRouter } from './routes/planets/planets.routes.js';
 
 const app = express();
 
