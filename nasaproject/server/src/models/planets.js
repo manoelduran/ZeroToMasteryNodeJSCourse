@@ -1,0 +1,3 @@
+const planets = [];
+
+export { planets };
