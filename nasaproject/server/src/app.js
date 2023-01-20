@@ -2,7 +2,9 @@ import path from 'path';
 import express from 'express';
 import cors from 'cors';
 import { planetsRouter } from './routes/planets/planets.routes.js';
+import { launchesRouter } from './routes/launches/launches.routes.js';
 import morgan from 'morgan';
+
 
 const app = express();
 app.use(cors({
@@ -13,6 +15,7 @@ const buildDirectory = path.join('public')
 app.use(express.json());
 app.use(express.static(buildDirectory))
 app.use(planetsRouter);
+app.use(launchesRouter);
 app.get('/', (req, res) => {
     res.sendFile('public', 'index.html')
 })
