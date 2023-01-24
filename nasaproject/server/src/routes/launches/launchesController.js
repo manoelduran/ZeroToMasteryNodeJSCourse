@@ -1,13 +1,14 @@
-import { launches } from "../../models/launches.js";
+import { launches, getAllLaunches, addNewLaunch } from "../../models/launches.js";
 
 function getLaunches(req, res) {
-    return res.status(200).json(Array.from(launches.values()))
+    return res.status(200).json(getAllLaunches())
 };
 
-function createLaunche(req, res) {
+function createLaunch(req, res) {
     const data = req.body
-    launches.set(data.flightNumber, data)
+    data.launchDate = new Date(data.launchDate)
+    addNewLaunch(data)
     return res.status(201).json(data);
 }
 
-export { getLaunches, createLaunche };
+export { getLaunches, createLaunch };

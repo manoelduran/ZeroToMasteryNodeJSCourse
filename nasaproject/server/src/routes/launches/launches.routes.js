@@ -1,10 +1,10 @@
 import express from 'express';
-import { getLaunches, createLaunche } from './launchesController.js';
+import { getLaunches, createLaunch } from './launchesController.js';
 
 
 const launchesRouter = express.Router();
 
-launchesRouter.get('/launches', getLaunches);
-launchesRouter.post('/launches', createLaunche);
+launchesRouter.get('/', getLaunches);
+launchesRouter.post('/', createLaunch);
 
 export { launchesRouter };
