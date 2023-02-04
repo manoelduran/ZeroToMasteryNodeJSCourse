@@ -20,16 +20,26 @@ function getAllLaunches() {
 }
 
 function addNewLaunch(launch) {
-    latestFlightNumber++
+    latestFlightNumber++;
     launches.set(
         latestFlightNumber,
         Object.assign(launch, {
+            flightNumber: latestFlightNumber,
             success: true,
             upcoming: true,
             customers: ['Zero to Mastery', 'Nasa'],
-            flightNumber: latestFlightNumber
         }))
 }
 
+function existsLounchWithFlightNumber(flightNumber) {
+    return launches.has(flightNumber);
+}
+function deleteLauch(flightNumber) {
+    const aborted = launches.get(flightNumber)
+    aborted.upcoming = false
+    aborted.success = false
+    return aborted
+}
 
-export { launches, addNewLaunch, getAllLaunches };
+
+export { launches, addNewLaunch, getAllLaunches, deleteLauch, existsLounchWithFlightNumber };
