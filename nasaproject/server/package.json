@@ -6,6 +6,8 @@
   "description": "Nasa Mission Controll API",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
     "watch": "nodemon src/server.js",
     "start": "PORT=5000 node src/server.js"
   },
@@ -15,6 +17,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "jest": "^29.4.1",
     "nodemon": "^2.0.20"
   }
 }
