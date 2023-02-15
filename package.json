@@ -9,7 +9,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node ./nodejs/modules/thirdPartyModules/api.js",
+    "start": "node ./performance-example/index.js",
     "dev": "nodemon ./js/runtime/index.js"
   }
 }
