@@ -1,5 +1,4 @@
 import express from 'express';
-import cluster from 'cluster';
 
 const app = express()
 
@@ -20,11 +19,5 @@ app.get('/timer', (req, res) => {
 })
 
 console.log('Running server.js...')
-if (cluster.isPrimary) {
-    console.log('Master has been started...')
-    cluster.fork();
-    cluster.fork();
-} else {
-    console.log('Worker process started.')
-    app.listen(3000)
-}
+console.log('Worker process started.')
+app.listen(3000)
