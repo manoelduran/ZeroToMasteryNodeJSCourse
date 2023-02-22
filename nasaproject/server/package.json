@@ -9,12 +9,14 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "watch": "nodemon src/server.js",
-    "start": "PORT=5000 node src/server.js"
+    "start": "PORT=5000 node src/server.js",
+    "cluster": "pm2 start src/server.js -i max"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parse": "^5.3.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pm2": "^5.2.2"
   },
   "devDependencies": {
     "jest": "^29.4.1",
