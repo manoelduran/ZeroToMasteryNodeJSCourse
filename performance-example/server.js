@@ -4,7 +4,7 @@ const app = express()
 
 function delay(duration) {
     const startTime = Date.now()
-    while (Date.now - startTime < duration) {
+    while (Date.now() - startTime < duration) {
 
     }
 }
@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/timer', (req, res) => {
-    delay(9000)
-    res.send(`DING DING DING! ${process.pid}`)
+    delay(4000)
+    res.send(`Beep beep beep! ${process.pid}`)
 })
 
 console.log('Running server.js...')
